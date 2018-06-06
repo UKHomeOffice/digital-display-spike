@@ -10,6 +10,9 @@ const hoganExpressStrict = require('hogan-express-strict');
 const expressPartialTemplates = require('express-partial-templates');
 const path = require('path');
 
+const config = require('./config')
+const port = config.port;
+
 // setup for front end toolkit
 govukTemplate.setup(app);
 
@@ -38,6 +41,6 @@ app.get('/download', function(req, res){
 });
 
 // Set server port
-app.listen(4000, function() {
-  console.log('App listening on port 4000!')
+app.listen(port, function() {
+  console.log(`App listening on port ${port}!`)
 });
