@@ -6,13 +6,14 @@
   "scripts": {
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development npm-run-all --parallel watch:app watch:scss",
+    "dev": "NODE_ENV=development npm-run-all --parallel watch:app watch:scss copy:images",
     "watch:app": "nodemon .",
     "watch:scss": "nodemon -e scss -x 'npm run sass'",
-    "setup": "mkdir ./public; mkdir ./public/css",
+    "setup": "mkdir -p ./public/js ./public/css ./public/images",
+    "copy:images": "cp -r ./app/assets/images ./public/",
     "sass": "npm-sass ./app/assets/sass/app.scss > ./public/css/app.css",
     "clean": "rm -rf ./public",
-    "postinstall": "npm-run-all clean setup sass"
+    "postinstall": "npm-run-all clean setup sass copy:images"
   },
   "repository": {
     "type": "git",

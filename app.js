@@ -32,6 +32,11 @@ app.get('/', function(req, res){
   }));
 });
 
+app.get('/download', function(req, res){
+  res.render('download', Object.assign({}, res.locals, {
+  }));
+});
+
 // Set server port
 app.listen(4000, function() {
   console.log('App listening on port 4000!')
