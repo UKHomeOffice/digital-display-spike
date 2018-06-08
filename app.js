@@ -30,13 +30,25 @@ app.use(expressPartialTemplates(app));
 // serving static files
 app.use('/public', express.static(path.resolve(__dirname, 'public')));
 
-app.get('/', function(req, res){
-  res.render('home', Object.assign({}, res.locals, {
+// pdf routes
+app.get('/pdf', function(req, res){
+  res.render('home-pdf', Object.assign({}, res.locals, {
   }));
 });
 
-app.get('/download', function(req, res){
-  res.render('download', Object.assign({}, res.locals, {
+app.get('/', (req, res) => res.redirect('/pdf'));
+
+app.get('/download-pdf', function(req, res){
+  res.render('download-pdf');
+});
+
+app.get('/photo', function(req, res){
+  res.render('home-photo', Object.assign({}, res.locals, {
+  }));
+});
+
+app.get('/download-photo', function(req, res){
+  res.render('download-photo', Object.assign({}, res.locals, {
   }));
 });
 
