@@ -1221,6 +1221,12 @@ fieldset + .reveal {
   padding-left: 0;
   padding-right: 42px; }
 
+.en-margin {
+  margin-left: -15px; }
+
+.ar-margin {
+  margin-right: -20px; }
+
 #footer {
   position: relative;
   border-top: 1rem solid #005ea5; }
@@ -1230,6 +1236,9 @@ fieldset + .reveal {
   top: -2em;
   left: 21em;
   margin-bottom: -2em; }
+
+.ar-float [lang="ar"] {
+  float: right; }
 
 .header-proposition {
   position: relative;

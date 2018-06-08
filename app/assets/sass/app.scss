@@ -2,6 +2,15 @@
 @import "indentpanels";
 @import "icons";
 
+// panel-indent fiddling of margin
+.en-margin {
+  margin-left: -15px;
+}
+
+.ar-margin {
+   margin-right: -20px;
+}
+
 // Fixing a bug in gov.uk not having the blue border
 #footer {
   position: relative;
@@ -15,6 +24,11 @@
   left: 21em;;
   margin-bottom: -2em;
 }
+
+.ar-float [lang="ar"] {
+  float: right;
+}
+
 
 //TODO: Fix this, it's not great
 .header-proposition {
@@ -437,3 +451,8 @@ pre {
   /* Instead use this non-standard one: */
   word-break: break-word;
 }
+
+//exp
+// ==========================================================================
+// Icons
+// ==========================================================================
